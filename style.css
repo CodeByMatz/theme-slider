@@ -3,6 +3,7 @@
   padding: 0;
   border: 0;
   box-sizing: border-box;
+transition: 0.4 ease;
 }
 
 body {
@@ -13,8 +14,8 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  transition: background-color 0.3s ease;
-  background-color: #f1fd50;
+  transition: background-image 0.4s ease; 
+  background-image: url("assets/images/bg-morning.png"); 
 }
 
 main {
@@ -26,28 +27,37 @@ main {
   align-items: center;
 }
 
-
 footer {
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
-
   height: 50px;
   width: 100%;
-
   text-align: center;
   text-transform: uppercase;
-
   font-size: 12px;
   font-family: "Montserrat", serif;
   font-weight: 700;
-
   display: flex;
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
   max-width: 100%;
   border-top: 2px solid;
-  border-image: linear-gradient(45deg, #ff0000, #0000ff) 1;
+  border-image: linear-gradient(45deg, #6200ff, #ff0080) 1;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  transform: scale(1.1);
+  transition: 0.4s ease-in-out;
+}
+
+#icons > img{
+  transition: 0.4s ease;
 }
 
 #container-slider {
@@ -65,18 +75,14 @@ footer {
   background-color: #f1fd50;
   height: 100px;
   width: 80%;
-
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
   align-items: center;
   border-radius: 50px;
   cursor: pointer;
-
-  border: 5px solid white;
-
-  box-shadow: inset 10px -10px 10px rgba(0, 0, 0, 0.253),
-    0px 10px 0px rgba(0, 0, 0, 0.281);
+  box-shadow: inset 10px -10px 10px rgba(0, 0, 0, 0.253), 0px 10px 0px rgba(0, 0, 0, 0.281);
+  position: relative;
 }
 
 #dot {
@@ -85,16 +91,15 @@ footer {
   width: 60px;
   border-radius: 50%;
   margin-left: 5%;
-  transition: margin-left 0.3s ease;
-  box-shadow: inset 10px -3px 0px rgba(0, 0, 0, 0.247),
-    0px 5px 2px rgba(0, 0, 0, 0.281);
+  transition: margin-left 0.2s ease;
+  box-shadow: inset 10px -3px 0px rgba(0, 0, 0, 0.247), 0px 5px 2px rgba(0, 0, 0, 0.281);
+  z-index: 2;
 }
 
 #dot:hover {
   transform: scale(1.12);
   transition: 0.4s ease-in-out;
-  box-shadow: inset 10px -3px 0px rgba(0, 0, 0, 0.247),
-    0px 5px 2px rgba(0, 0, 0, 0.281), 0px 5px 2px rgba(0, 0, 0, 0.281);
+  box-shadow: inset 10px -3px 0px rgba(0, 0, 0, 0.247), 0px 5px 2px rgba(0, 0, 0, 0.281), 0px 5px 2px rgba(0, 0, 0, 0.281);
 }
 
 #icons {
@@ -104,9 +109,7 @@ footer {
   align-items: center;
   margin: 0px 10px;
   margin-bottom: 30px;
-  filter: drop-shadow(0px 4px 2px rgba(77, 58, 58, 0.363)) brightness(1.1)
-    saturate(2);
-
+  filter: drop-shadow(0px 4px 2px rgba(77, 58, 58, 0.363)) brightness(1.1) saturate(2);
   gap: 2rem;
 }
 
@@ -114,19 +117,40 @@ footer {
   opacity: 1;
   height: 5rem;
   width: 5rem;
-  filter: drop-shadow(0px 4px 2px rgba(77, 58, 58, 0.363)) brightness(1.1)
-    saturate(2);
+  filter: drop-shadow(0px 4px 2px rgba(77, 58, 58, 0.363)) brightness(1.1) saturate(2);
 }
 
 #moon {
   opacity: 0;
   width: 5rem;
   height: 5rem;
-  filter: drop-shadow(0px 4px 2px rgba(77, 58, 58, 0.363)) brightness(1.1)
-    saturate(2);
+  filter: drop-shadow(0px 4px 2px rgba(77, 58, 58, 0.363)) brightness(1.1) saturate(2);
 }
 
 #sun.show,
 #moon.show {
   opacity: 1;
+}
+
+#slider-image1,
+#slider-image2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  opacity: 1;
+  transition: opacity 0.4s ease-in-out;
+  z-index: 1;
+  border-radius: 50px;
+  border: 2px solid rgba(255, 255, 255, 0.473);
+}
+
+#slider-image1 {
+  display: block;
+}
+
+#slider-image2 {
+  display: none;
 }
