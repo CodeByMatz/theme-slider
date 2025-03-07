@@ -1,2 +1,3 @@
 # theme-slider
-Theme Slider v1.0
+Theme Slider 
+HTML, CSS and JS.
