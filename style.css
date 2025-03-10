@@ -17,6 +17,7 @@ body {
   transition: background-image 0.3s ease;
   background-size: 100% 100%; 
   background-position: center center; 
+ 
   
 }
 
@@ -146,4 +147,20 @@ footer {
   display: none;
 }
 
+footer > a > p {
+   list-style-type: none;
+   transition: 0.5 ease;
+   color: black;
+   
+}
+
+a {
+   text-decoration: none;
+  transition: 0.5 ease;
+}
+
+footer > a > p:hover {
+  scale: 1.1;
+  transition: 0.5 ease
+}
 
