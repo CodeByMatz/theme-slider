@@ -9,6 +9,8 @@ function toggleSlider() {
   const slider = document.getElementById("slider");
   const sliderImage1 = document.getElementById("slider-image1");
   const sliderImage2 = document.getElementById("slider-image2");
+const fontFooter = document.getElementById("font-footer");
+
 
   if (sliderState) {
     sun.style.opacity = "1";
@@ -16,8 +18,8 @@ function toggleSlider() {
     sun.classList.add("show");
     moon.classList.remove("show");
     body.style.backgroundImage = "url('assets/images/bg-morning.png')";
-    body.style.backgroundSize = "100% 100%"; // Garantindo que a imagem estique
-    body.style.backgroundPosition = "center center"; // Centralizando a imagem
+    body.style.backgroundSize = "100% 100%"; // 
+    body.style.backgroundPosition = "center center"; //
     slider.style.backgroundColor = "#f1fd50";
     footer.style.backgroundColor = "#FFFFFF";
     footer.style.color = "#000000";
@@ -34,7 +36,7 @@ function toggleSlider() {
     body.style.backgroundPosition = "center center"; 
     slider.style.backgroundColor = "#002176";
     footer.style.backgroundColor = "#000000";
-    footer.style.color = "#FFFFFF";
+    fontFooter.style.color = "#002176";
     sliderImage1.style.display = "none";
     sliderImage2.style.display = "block";
   }
