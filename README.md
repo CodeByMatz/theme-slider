@@ -35,7 +35,7 @@ O **Theme Slider** é um projeto interativo que permite alternar entre dois tema
 3. Clique no slider para alternar entre os temas
 
 ## 📸 Captura de Tela
-![Theme Slider](assets/images/sc1.png)
+![Theme Slider](assets/images/sc.gif)
 
 ## 📌 Tecnologias Utilizadas
 - HTML5
